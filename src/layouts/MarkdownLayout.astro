@@ -1,0 +1,35 @@
+---
+import Parallax from '../components/Parallax';
+const {frontmatter} = Astro.props;
+---
+
+<html>
+   <!-- ... -->
+   <Parallax client:load/>
+  <h1>{frontmatter.title}</h1>
+  {frontmatter.author && <h2>Post author: {frontmatter.author}</h2>}
+  <slot />
+   <!-- ... -->
+</html>
+
+<style>
+    body {
+        color: white;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        background-color: rgb(31, 26, 31);
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+    }
+
+    * {
+        width: 80%;
+        margin: auto;
+        text-align: center;
+    }
+
+    p {
+        color: white;
+        text-align: left;
+    }
+</style>
