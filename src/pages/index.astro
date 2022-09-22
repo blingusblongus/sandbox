@@ -7,41 +7,23 @@ import Card from '../components/Card.astro';
 	<main>
 		<h1>Glory to the <span class="text-gradient">plan</span></h1>
 		<p class="instructions">
-			Check out the <code>src/pages</code> directory to get started.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
+			Stuff is coming soon, I promise...
 		</p>
+		
 		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Chat"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-			<Card
+			<!-- <Card
 				href="/sandbox/markdown"
 				title="Markdown"
 				body="Check out the markdown suppoort."
-			/>
-			<Card
+			/> -->
+			<!-- <Card
 				href="/sandbox/three"
 				title="Three"
 				body="Experiment with three.astro"
-			/>
+			/> -->
 		</ul>
+
+		<img src="/sandbox/images/blingus.png" />
 	</main>
 </Layout>
 
@@ -50,7 +32,15 @@ import Card from '../components/Card.astro';
 		--astro-gradient: linear-gradient(0deg, #4f39fa, #da62c4);
 	}
 
+	body {
+		background: rgb(252,232,255);
+		background: radial-gradient(circle, rgba(252,232,255,1) 0%, rgba(175,243,255,1) 85%);
+		height: 100vh;
+		overflow-y: hidden;
+	}
+
 	h1 {
+		text-align: center;
 		margin: 2rem 0;
 	}
 
@@ -58,6 +48,7 @@ import Card from '../components/Card.astro';
 		margin: auto;
 		padding: 1em;
 		max-width: 60ch;
+
 	}
 
 	.text-gradient {
@@ -85,9 +76,11 @@ import Card from '../components/Card.astro';
 		line-height: 1.6;
 		margin: 1rem 0;
 		background: #4f39fa;
+		background: var(--astro-gradient);
 		padding: 1rem;
 		border-radius: 0.4rem;
 		color: var(--color-bg);
+		text-align: center;
 	}
 
 	.instructions code {
