@@ -7,7 +7,7 @@ import { useGLTF } from "@react-three/drei";
 
 export function Pig(props) {
     
-  const { nodes, materials } = useGLTF("/Pig.glb");
+  const { nodes, materials } = useGLTF("/sandbox/Pig.glb");
   return (
     <group {...props} dispose={null}>
       <group position={[0, 1.19, 0]} rotation={[Math.PI, 0, 0]} scale={-0.03}>
@@ -28,4 +28,4 @@ export function Pig(props) {
   );
 }
 
-useGLTF.preload('/Pig.glb');
+useGLTF.preload('/sandbox/Pig.glb');
