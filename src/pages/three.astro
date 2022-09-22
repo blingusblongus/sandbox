@@ -1,0 +1,21 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ThreeScene from "../components/ThreeScene";
+import ThreeForeground from '../components/ThreeForeground';
+import '../components/ThreeScene.css';
+---
+
+<Layout title="Three.js">
+    <main>
+        <ThreeScene client:load/>
+    </main>
+</Layout>
+
+
+<style>
+    body {
+        color: white;
+        background-color: rgb(31, 26, 31);
+        height: 3000px;
+    }
+</style>
