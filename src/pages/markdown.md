@@ -11,4 +11,4 @@ Here's an article with some ***description*** stuff
 
 Ok, single line breaks are not enough in md files.
 
-<img src="/favicon.svg" width="100px"/>
+<img src="/sandbox/favicon.svg" width="100px"/>
