@@ -14,19 +14,28 @@ const ThreeScene = () => {
     }
 
     useEffect(() => {
-        console.log('useEffect')
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, [])
 
-    console.log(scroll);
+    
+
     return <div className='three-scene'>
         <ThreeForeground />
         <Canvas style={{ top: 0, position: 'absolute' }}>
                 <ambientLight />
                 <pointLight position={[10, 10, 10]} />
-                <Box position={[3, scroll * .1, -3]} />
-                <Pig position={[-4,-5 + scroll * .1,-2]}/>
+                <Box position={[3, scroll * .1 - 5, -3]} />
+                {[
+                    [-5,-5,-5]
+                ].map(coords => {
+                    coords[1] + scroll*.1;
+                    return <Pig 
+                    position={coords}
+                    rotation={[scroll*.01, scroll*.01, scroll*.01]}
+                    />
+                })}
+                
         </Canvas>
     </div>
 }
