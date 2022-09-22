@@ -10,7 +10,7 @@ export function Pig(props) {
   const { nodes, materials } = useGLTF("/sandbox/Pig.glb");
   return (
     <group {...props} dispose={null}>
-      <group position={[0, 1.19, 0]} rotation={[Math.PI, 0, 0]} scale={-0.03}>
+      <group position={[.1, 0.3, .1]} rotation={[Math.PI, 0, 0]} scale={-0.03}>
         <mesh
           castShadow
           receiveShadow
