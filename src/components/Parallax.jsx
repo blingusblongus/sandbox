@@ -31,6 +31,6 @@ export default () => {
     }
 
     return <img onClick={handleClick} 
-        src="../../public/images/album_art.jpeg" 
+        src="/images/album_art.jpeg" 
         style={styles} />
 }

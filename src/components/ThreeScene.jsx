@@ -1,5 +1,5 @@
-import React, { useRef, useState, useEffect, Suspense} from 'react'
-import { Canvas, useFrame } from '@react-three/fiber'
+import React, { useRef, useState, useEffect} from 'react'
+import { Canvas  } from '@react-three/fiber'
 import Box from './ThreeBox';
 import ThreeForeground from './ThreeForeground';
 import './ThreeScene.jsx';
@@ -18,8 +18,6 @@ const ThreeScene = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, [])
 
-    
-
     return <div className='three-scene'>
         <ThreeForeground />
         <Canvas style={{ top: 0, position: 'absolute' }}>
@@ -31,6 +29,7 @@ const ThreeScene = () => {
                 ].map(coords => {
                     coords[1] + scroll*.1;
                     return <Pig 
+                    key={coords.join('')}
                     position={coords}
                     rotation={[scroll*.01, scroll*.01, scroll*.01]}
                     />
