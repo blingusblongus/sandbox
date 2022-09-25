@@ -1,0 +1,7 @@
+.parallax {
+    width: 200%;
+    position: absolute;
+    z-index: -1;
+    filter: blur(3px) opacity(10%);
+    transform: scale(2) translateX(-10%);
+}

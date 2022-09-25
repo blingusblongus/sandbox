@@ -5,7 +5,9 @@ const {frontmatter} = Astro.props;
 
 <html>
    <!-- ... -->
-   <Parallax client:load/>
+   <Parallax 
+    imgSrc="/sandbox/images/album_art.jpeg"
+    client:load/>
   <h1>{frontmatter.title}</h1>
   {frontmatter.author && <h2>Post author: {frontmatter.author}</h2>}
   <slot />
