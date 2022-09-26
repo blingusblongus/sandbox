@@ -1,7 +1,22 @@
 import React, { useState, useEffect } from "react";
+import './Parallax.css';
 
-export default () => {
+interface Props {
+    imgSrc: string;
+}
+
+interface Styles {
+    width: string;
+    position: string;
+    top: string | number;
+    [key: string]: string | number;
+}
+
+export default ({imgSrc}: Props) => {
     const [offsetY, setOffsetY] = useState(0)
+    const styles = {
+        top: offsetY * -2,
+    }
 
     const handleScroll = () => {
         console.log('scrolling');
@@ -20,17 +35,11 @@ export default () => {
     console.log(offsetY);
     console.log('component mounted');
 
-    const styles = {
-        width: '200%',
-        position: 'absolute',
-        top: offsetY * -2,
-        zIndex: -1,
-        filter: 'blur(10px) opacity(10%)',
-        transform: 'scale(2) translateX(-10%)',
-        // objectFit: 'cover'
-    }
+   
 
-    return <img onClick={handleClick} 
-        src="/sandbox/images/album_art.jpeg" 
+    return <img 
+        className="parallax"
+        onClick={handleClick} 
+        src={imgSrc} 
         style={styles} />
 }
